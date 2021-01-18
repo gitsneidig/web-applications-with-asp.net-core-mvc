@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\ShoppingCart\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Views\Pie\" />
+    <Folder Include="Views\Order\" />
+  </ItemGroup>
+
 </Project>
