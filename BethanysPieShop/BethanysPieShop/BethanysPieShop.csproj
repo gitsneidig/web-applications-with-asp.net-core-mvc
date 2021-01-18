@@ -9,6 +9,7 @@
     <Folder Include="Views\Home\" />
     <Folder Include="Views\ShoppingCart\" />
     <Folder Include="Views\Order\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
   <ItemGroup>
