@@ -1,9 +1,5 @@
 ﻿using BethanysPieShop.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BethanysPieShop.Controllers
 {
@@ -14,13 +10,15 @@ namespace BethanysPieShop.Controllers
 
         public PieController(IPieRepository pieRepository, ICategoryRepository categoryRepository)
         {
-            pieRepository = _pieRepository;
-            categoryRepository = _categoryRepository;
+            _pieRepository = pieRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public ViewResult List()
         {
             return View(_pieRepository.AllPies);
         }
+
+
     }
 }
