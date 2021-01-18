@@ -1,10 +1,5 @@
 ﻿@model BethanysPieShop.ViewModels.PiesListViewModel;
 
-<html>
-<head>
-    <title>Bethany's Pie Shop</title>
-</head>
-<body>
     <h1>@Model.CurrentCategory</h1>
     @foreach (var pie in Model.Pies)
     {
@@ -14,5 +9,3 @@
             <h4>@pie.Category.CategoryName</h4>
         </div>
     }
-</body>
-</html>
