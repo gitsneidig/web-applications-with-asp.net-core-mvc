@@ -11,7 +11,7 @@ namespace BethanysPieShop.Models
 
         public CategoryRepository(AppDbContext appDbContext)
         {
-            appDbContext = _appDbContext;
+            _appDbContext = appDbContext;
         }
 
         public IEnumerable<Category> AllCategories => _appDbContext.Categories;
