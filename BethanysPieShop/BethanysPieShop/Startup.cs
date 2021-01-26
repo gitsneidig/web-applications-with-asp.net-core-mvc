@@ -54,12 +54,14 @@ namespace BethanysPieShop
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSession();
+            
 
             // Force app to use HTTPs or return exception
             app.UseHttpsRedirection();
             // Enable application to serve static files
             app.UseStaticFiles();
+
+            app.UseSession();
 
             // Enables application to respond to incoming request
             app.UseRouting();
