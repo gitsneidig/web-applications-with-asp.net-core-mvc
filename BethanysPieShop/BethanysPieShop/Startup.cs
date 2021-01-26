@@ -38,6 +38,10 @@ namespace BethanysPieShop
 
             services.AddControllersWithViews();
 
+            // Add services to manage session for the shopping cart
+            services.AddHttpContextAccessor();
+            services.AddSession();
+
 
         }
 
@@ -48,6 +52,8 @@ namespace BethanysPieShop
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSession();
 
             // Force app to use HTTPs or return exception
             app.UseHttpsRedirection();
