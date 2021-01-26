@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Contact\" />
-    <Folder Include="Views\ShoppingCart\" />
     <Folder Include="Views\Order\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
