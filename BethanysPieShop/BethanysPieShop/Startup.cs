@@ -61,6 +61,7 @@ namespace BethanysPieShop
             // Enable application to serve static files
             app.UseStaticFiles();
 
+            // Add support for sessions
             app.UseSession();
 
             // Enables application to respond to incoming request

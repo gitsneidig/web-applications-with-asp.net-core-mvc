@@ -7,20 +7,20 @@ namespace BethanysPieShop.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ShoppintCartItems",
+                name: "ShoppingCartItems",
                 columns: table => new
                 {
                     ShoppingCartItemId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PieId = table.Column<int>(nullable: true),
                     Amount = table.Column<int>(nullable: false),
-                    ShoppingCardId = table.Column<string>(nullable: true)
+                    ShoppingCartId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ShoppintCartItems", x => x.ShoppingCartItemId);
+                    table.PrimaryKey("PK_ShoppingCartItems", x => x.ShoppingCartItemId);
                     table.ForeignKey(
-                        name: "FK_ShoppintCartItems_Pies_PieId",
+                        name: "FK_ShoppingCartItems_Pies_PieId",
                         column: x => x.PieId,
                         principalTable: "Pies",
                         principalColumn: "PieId",
@@ -28,15 +28,15 @@ namespace BethanysPieShop.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShoppintCartItems_PieId",
-                table: "ShoppintCartItems",
+                name: "IX_ShoppingCartItems_PieId",
+                table: "ShoppingCartItems",
                 column: "PieId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ShoppintCartItems");
+                name: "ShoppingCartItems");
         }
     }
 }

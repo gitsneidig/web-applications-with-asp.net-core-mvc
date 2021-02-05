@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BethanysPieShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210126044845_ShoppingCartAdded")]
+    [Migration("20210205191719_ShoppingCartAdded")]
     partial class ShoppingCartAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -286,14 +286,14 @@ namespace BethanysPieShop.Migrations
                     b.Property<int?>("PieId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ShoppingCardId")
+                    b.Property<string>("ShoppingCartId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ShoppingCartItemId");
 
                     b.HasIndex("PieId");
 
-                    b.ToTable("ShoppintCartItems");
+                    b.ToTable("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("BethanysPieShop.Models.Pie", b =>

@@ -284,14 +284,14 @@ namespace BethanysPieShop.Migrations
                     b.Property<int?>("PieId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ShoppingCardId")
+                    b.Property<string>("ShoppingCartId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ShoppingCartItemId");
 
                     b.HasIndex("PieId");
 
-                    b.ToTable("ShoppintCartItems");
+                    b.ToTable("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("BethanysPieShop.Models.Pie", b =>
