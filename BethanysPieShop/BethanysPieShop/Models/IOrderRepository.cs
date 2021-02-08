@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShop.Models
 {
-    public class IOrderRepository
+    public interface IOrderRepository
     {
         void CreateOrder(Order order);
-        void CreatePieGiftOrder(PieGiftOrder pieGiftOrder);
     }
 }
