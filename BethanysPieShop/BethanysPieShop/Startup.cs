@@ -73,6 +73,9 @@ namespace BethanysPieShop
             // Enables application to respond to incoming request
             app.UseRouting();
 
+            app.UseAuthentication();
+            //app.UserAuthorization();
+
             // Enables application to respond to incoming request
             app.UseEndpoints(endpoints =>
             {
