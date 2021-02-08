@@ -6,42 +6,29 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BethanysPieShop.Models
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
-
-        public DbSet<Pie> Pies { get; set; }
         public DbSet<Category> Categories { get; set; }
-
+        public DbSet<Pie> Pies { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
-
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            SeedDatabase(modelBuilder);
-        }
 
-        private void SeedDatabase(ModelBuilder modelBuilder)
-        {
-            SeedCategories(modelBuilder);
-            SeedPies(modelBuilder);
-        }
-
-        private void SeedCategories(ModelBuilder modelBuilder)
-        {
+            //seed categories
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 1, CategoryName = "Fruit pies" });
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 2, CategoryName = "Cheese cakes" });
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 3, CategoryName = "Seasonal pies" });
-        }
 
-        private void SeedPies(ModelBuilder modelBuilder)
-        {
+            //seed pies
+
             modelBuilder.Entity<Pie>().HasData(new Pie
             {
                 PieId = 1,
@@ -222,8 +209,5 @@ namespace BethanysPieShop.Models
                 AllergyInformation = ""
             });
         }
-
-
-
     }
 }

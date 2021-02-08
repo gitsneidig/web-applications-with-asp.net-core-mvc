@@ -24,6 +24,8 @@ namespace BethanysPieShop.Models
 
             _appDbContext.Orders.Add(order);
 
+            _appDbContext.SaveChanges();
+
             var shoppingCartItems = _shoppingCart.ShoppingCartItems;
 
             foreach (var shoppingCartItem in shoppingCartItems)
@@ -38,6 +40,8 @@ namespace BethanysPieShop.Models
 
                 _appDbContext.OrderDetails.Add(orderDetail);
             }
+
+            
 
             _appDbContext.SaveChanges();
         }
