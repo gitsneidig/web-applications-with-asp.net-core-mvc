@@ -18,7 +18,7 @@ namespace BethanysPieShop.Controllers
             _shoppingCart = shoppingCart;
         }
 
-        public IActionResult Index()
+        public IActionResult Checkout()
         {
             return View();
         }
