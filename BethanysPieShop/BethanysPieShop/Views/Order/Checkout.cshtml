@@ -3,6 +3,8 @@
 <form asp-action="Checkout" method="post" class="form-horizontal" role="form">
     <h4>You're just one step away from your delicious pies.</h4>
 
+    <div asp-validation-summary="All" class="text-danger"></div>
+
     <div class="form-group">
         <label asp-for="LastName" class="col-md-2 control-label"></label>
         <div class="col-md-5">
